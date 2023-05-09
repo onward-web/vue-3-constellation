@@ -1,0 +1,40 @@
+{
+  "name": "vue-3-constellation",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onward-web/vue-3-constellation.git"
+  },
+  "private": false,
+  "version": "0.0.13",
+  "main": "./dist/vue-3-constellation.cjs.js",
+  "module": "./dist/vue-3-constellation.esm.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-3-constellation.esm.js",
+      "require": "./dist/vue-3-constellation.cjs.js"
+    },
+    "./dist/vue-3-constellation.css": "./dist/vue-3-constellation.css"
+  },
+  "types": "./dist/main.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@nuxtjs/svg-sprite": "^1.0.2",
+    "floating-vue": "^2.0.0-beta.20",
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@intlify/unplugin-vue-i18n": "^0.10.0",
+    "@vitejs/plugin-vue": "^4.2.1",
+    "path": "^0.12.7",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "typescript": "~5.0.4",
+    "vite": "^4.3.4",
+    "vite-plugin-dts": "^2.3.0",
+    "vue-i18n": "^9.2.2",
+    "vue-tsc": "^1.6.4"
+  }
+}
