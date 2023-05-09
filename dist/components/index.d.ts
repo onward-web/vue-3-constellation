@@ -1,2 +1,2 @@
-import Vue3QuickMenu from './Vue3QuickMenu.vue';
-export { Vue3QuickMenu };
+import Vue3Constellation from './Vue3Constellation.vue';
+export { Vue3Constellation };

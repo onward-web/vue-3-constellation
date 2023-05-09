@@ -2,32 +2,6 @@
 
 import Vue3Constellation from './components/Vue3Constellation.vue'
 
-const quickMenuOption = {
-  menuCount: 4,
-  urlsData: [
-      {type:'external',url: 'tel:+380688339030', target: '_blank'},
-      {type:false,url: false, target: '_self'},
-      {type:'external',url: 'mailto:info@onward-web.com'},
-      {type:'external',url: 'viber://chat?number=%2B380688339030'}
-  ],
-  linkIconClassList: ['menu-animate', 'menu-animate', 'menu-animate', 'menu-animate'],
-  iconNameList: ['base/phone', 'base/chat', 'base/email', 'base/viber'],
-  itemTitleList: ['addons.QuickMenu.tooltip.phone', 'addons.QuickMenu.tooltip.chat', 'addons.QuickMenu.tooltip.email', 'addons.QuickMenu.tooltip.viber'],
-  tooltipData: [
-    {content: 'test1', placement: 'left', container: '#quickMenuItem_0'},
-    {content: 'test2', placement: 'left', container: '#quickMenuItem_1'},
-    {content: 'test3', placement: 'left', container: '#quickMenuItem_2'},
-    {content: 'test4', placement: 'bottom', container: '#quickMenuItem_3'}
-  ],
-  menuPosition: 'bottom-right',
-  menuBackgroundColor: '#ff0f33',
-};
-
-// methods
-const quickMenuListener = () => {
-
-}
-
 </script>
 
 <template>
