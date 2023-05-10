@@ -1,5 +1,5 @@
 <template>
-  <div class="vue-3-constellation" ref="vueConstellation">
+  <div class="vue-3-constellation"  ref="vue3Constellation">
     <div class = "vue-3-constellation__content">
       <slot/>
     </div>
@@ -7,10 +7,8 @@
 </template>
 
 <script>
-
-import { defineComponent, nextTick, onMounted } from "vue";
+import { defineComponent, nextTick, ref, onMounted } from 'vue'
 import Constellation from './Constellation.js'
-
 export default defineComponent({
   props:{
     width:{
@@ -82,10 +80,13 @@ export default defineComponent({
       type:Array,
       default: () => []
     }
-
   },
   setup(props) {
+    const vue3Constellation = ref(null)
+
     onMounted(() => {
+      // the DOM element will be assigned to the ref after initial render
+      console.log(vue3Constellation.value) // <div>Hello Vue 3</div>
 
       nextTick(() => {
 
@@ -93,12 +94,12 @@ export default defineComponent({
         for(let key in props) {
           options[key] = props[key]
         }
-        new Constellation(this.$el, options)
+        new Constellation(vue3Constellation.value, options);
 
       })
     });
+
+
   }
-});
+})
 </script>
-
-

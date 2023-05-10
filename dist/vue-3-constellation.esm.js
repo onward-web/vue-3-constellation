@@ -1,4 +1,4 @@
-import { defineComponent, onMounted, nextTick, openBlock, createElementBlock, createElementVNode, renderSlot } from "vue";
+import { defineComponent, ref, onMounted, nextTick, openBlock, createElementBlock, createElementVNode, renderSlot } from "vue";
 class Star {
   constructor(parent) {
     this.parent = parent;
@@ -192,20 +192,22 @@ const _sfc_main = defineComponent({
     }
   },
   setup(props) {
+    const vue3Constellation = ref(null);
     onMounted(() => {
+      console.log(vue3Constellation.value);
       nextTick(() => {
         const options = {};
         for (let key in props) {
           options[key] = props[key];
         }
-        new Constellation(this.$el, options);
+        new Constellation(vue3Constellation.value, options);
       });
     });
   }
 });
 const _hoisted_1 = {
   class: "vue-3-constellation",
-  ref: "vueConstellation"
+  ref: "vue3Constellation"
 };
 const _hoisted_2 = { class: "vue-3-constellation__content" };
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
