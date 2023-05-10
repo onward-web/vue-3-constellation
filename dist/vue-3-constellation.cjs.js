@@ -196,7 +196,6 @@ const _sfc_main = vue.defineComponent({
   setup(props) {
     const vue3Constellation = vue.ref(null);
     vue.onMounted(() => {
-      console.log(vue3Constellation.value);
       vue.nextTick(() => {
         const options = {};
         for (let key in props) {
@@ -205,6 +204,9 @@ const _sfc_main = vue.defineComponent({
         new Constellation(vue3Constellation.value, options);
       });
     });
+    return {
+      vue3Constellation
+    };
   }
 });
 const _hoisted_1 = {

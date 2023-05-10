@@ -69,7 +69,9 @@ declare const _sfc_main: import("vue").DefineComponent<{
         type: ArrayConstructor;
         default: () => never[];
     };
-}, void, any, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}, {
+    vue3Constellation: import("vue").Ref<null>;
+}, any, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     width: {
         type: NumberConstructor;
         required: false;
