@@ -1,5 +1,5 @@
 <template>
-  <div class="vue-3-constellation"  ref="vue3Constellation">
+  <div class="vue-3-constellation" ref="vue3Constellation">
     <div class = "vue-3-constellation__content">
       <slot/>
     </div>
@@ -82,12 +82,10 @@ export default defineComponent({
     }
   },
   setup(props) {
+
     const vue3Constellation = ref(null)
 
     onMounted(() => {
-      // the DOM element will be assigned to the ref after initial render
-      console.log(vue3Constellation.value) // <div>Hello Vue 3</div>
-
       nextTick(() => {
 
         const options = {}
@@ -97,9 +95,11 @@ export default defineComponent({
         new Constellation(vue3Constellation.value, options);
 
       })
-    });
+    })
 
-
+    return {
+      vue3Constellation
+    }
   }
 })
 </script>
