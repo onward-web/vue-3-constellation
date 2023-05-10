@@ -43,7 +43,6 @@ export default defineConfig({
       external: ['vue'],
       output: {
         assetFileNames: (assetInfo) => {
-          console.log(assetInfo.name);
           if (assetInfo.name === 'index.css') return 'vue-3-constellation.css';
           return assetInfo.name;
         },

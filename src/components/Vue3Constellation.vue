@@ -8,7 +8,7 @@
 
 <script>
 
-import { onMounted, defineComponent } from "vue";
+import { defineComponent, nextTick, onMounted } from "vue";
 import Constellation from './Constellation.js'
 
 export default defineComponent({
@@ -86,7 +86,8 @@ export default defineComponent({
   },
   setup(props) {
     onMounted(() => {
-      this.$nextTick(() => {
+
+      nextTick(() => {
 
         const options = {}
         for(let key in props) {

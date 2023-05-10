@@ -195,7 +195,7 @@ const _sfc_main = vue.defineComponent({
   },
   setup(props) {
     vue.onMounted(() => {
-      this.$nextTick(() => {
+      vue.nextTick(() => {
         const options = {};
         for (let key in props) {
           options[key] = props[key];

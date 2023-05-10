@@ -5,7 +5,7 @@
     "url": "git+https://github.com/onward-web/vue-3-constellation.git"
   },
   "private": false,
-  "version": "0.0.13",
+  "version": "0.0.14",
   "main": "./dist/vue-3-constellation.cjs.js",
   "module": "./dist/vue-3-constellation.esm.js",
   "exports": {

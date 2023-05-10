@@ -1,4 +1,4 @@
-import { defineComponent, onMounted, openBlock, createElementBlock, createElementVNode, renderSlot } from "vue";
+import { defineComponent, onMounted, nextTick, openBlock, createElementBlock, createElementVNode, renderSlot } from "vue";
 class Star {
   constructor(parent) {
     this.parent = parent;
@@ -193,7 +193,7 @@ const _sfc_main = defineComponent({
   },
   setup(props) {
     onMounted(() => {
-      this.$nextTick(() => {
+      nextTick(() => {
         const options = {};
         for (let key in props) {
           options[key] = props[key];
